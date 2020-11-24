@@ -14,7 +14,7 @@ L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}
   accessToken: API_KEY
 }).addTo(myMap);
 
-var link = "../static/data/start.geojson";
+var link = "../static/data/map.geojson";
 d3.json(link, function(data) {
   // Creating a GeoJSON layer with the retrieved data
   L.geoJson(data).addTo(myMap);
