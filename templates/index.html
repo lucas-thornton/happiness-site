@@ -26,7 +26,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-5">
         <div class="well">
           <h5>Country List</h5>
           <select id="selDataset">
@@ -38,11 +38,44 @@
         </div>
         <div class="panel panel-primary">
           <div class="panel-heading">
-            <h3 class="panel-title">Top Factors</h3>
-            <div id=country_list>
-          
+            <h3 class="panel-title"><strong>Top Factors Contributing to Happiness</strong></h3>
+            <br>
+            <div id=developed_factors>
+              <option>Gender Gap</option>
+              <option>Power Distance</option>
+              <option>Democracy (value)</option>
+              <option>GDP per Cap</option>
+              <option>Religion: Buddhist</option>
+              <option>Immunization, Pol3 (% of one-year-old children)</option>
+              <option>Probability of dying among children ages 5-9 years (per 1,000)</option>
+              <option>% of children provided with second dose of measles vaccine</option>
+              <option>Probability of dying among youth ages 20-24 years (per 1,000)</option>
+              <option>% of enrolment in private schools for lower secondary education</option>
             </div>
-          
+            <div id=developing_factors>
+              <option>GDP per Cap</option>
+              <option>Region: Latin America and Caribbean</option>
+              <option>Urbanization (rate)</option>
+              <option>Prison (per 100k)</option>
+              <option>Religion: Muslim</option>
+              <option>Stillbirth rate (per 1,000 total births)</option>
+              <option>Unemployment (%)</option>
+              <option>Holiday (Paid Days)</option>
+              <option>Homicide per 100k</option>
+              <option>Internet users (per 100 people)</option>
+            </div>
+            <div id=underdeveloped_factors>
+              <option>Life expectancy at birth, female (years)</option>
+              <option>GDP per Cap</option>
+              <option>Religion: Buddhist</option>
+              <option>Probability of dying among children aged 10-14 years (per 1,000)</option>
+              <option>Number of under-five deaths, female</option>
+              <option>% of female students in upper secondary general education</option>
+              <option>Age dependency ratio, old</option>
+              <option>Survival to age 65, female (% of cohort)</option>
+              <option>Number of infant deaths, female</option>
+              <option>Life expectancy at birth, male (years)</option>
+            </div>
           </div>
         </div>
     </div>
@@ -50,19 +83,16 @@
             
 
         
-            <h3 class="text-center font-weight-bold blue-text mt-3 mb-4 pb-4"><strong>Use the Sliders to change the predicted Happiness Rating</strong></h3>
+        <h3 class="text-center font-weight-bold blue-text mt-3 mb-4 pb-4"><strong>Use the Sliders to change the predicted Happiness Rating</strong></h3>
               <hr>
                 
-        <div class="col-md-5">   
-                    <h2><span class="badge blue lighten-2 mb-4">Happiness Rating</span></h2>
-                    <h2 class="display-4" style="color:#0d47a1" ><strong id="happinessRating">6.83 </strong></h2>
-        </div>  
+        
               <!-- <br>  
               <br>   -->
             
           
               
-            <div id="developed_sliders" class="col-md-5">
+        <div id="developed_sliders" class="col-md-4">
                 <form class="range-field w-75" >
                     <label class=popup_GDP for="slider10">GDP Per Capita</label>
                     <span class="popuptext_GDP" id="GDP_Popup"></span>
@@ -99,78 +129,81 @@
           </div>
 
 
-      <div id="developing_sliders" class="col-md-5">
-        <form class="range-field w-75" >
-          <label class=popup_GDP for="slider20">GDP Per Capita</label>
-          <span class="popuptext_GDP" id="GDP_Popup"></span>
-          <input id="slider20" class="border-0" type="range" min="20000" max="120000" value="50000" step="1000"  />
-        </form>
-        <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan5">$50000</span>
-  
-        <form class="range-field w-75"></form>
-            <label for="slider21">Gender Gap</label>
-          <input id="slider21" class="border-0" type="range" min="0" max="1" step="0.01" value="0.7" />
-        </form>
-        <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan6">0.7</span>
-      <!-- </div>
-      <div class="col-md-5"> -->
-        <form class="range-field w-75">
-            <label for="slider22">Power Distance</label>
-          <input id="slider22" class="border-0" type="range" min="1" max="120" value=40 />
-        </form>
-        <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan7">40</span>
-      <!-- </div>
-      <div class="col-md-5"> -->
-        <form class="range-field w-75">
-            <label for="slider23">Democracy Value</label>
-          <input id="slider23" class="border-0" type="range" min="0" max="10" value="8" step="0.1" />
-        </form>
-        <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan8">8</span>
-      <!-- </div>
-      <div class="col-md-5"> -->
-        <form class="range-field w-75">
-            <label for="slider24">Unemployment %</label>
-          <input id="slider24" class="border-0" type="range" min="0" max="35" value="6.5" />
-        </form>
-        <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan9">6.5</span>
-      </div>
+          <div id="developing_sliders" class="col-md-4">
+            <form class="range-field w-75" >
+              <label class=popup_GDP for="slider20">GDP Per Capita</label>
+              <span class="popuptext_GDP" id="GDP_Popup"></span>
+              <input id="slider20" class="border-0" type="range" min="20000" max="120000" value="50000" step="1000"  />
+            </form>
+            <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan5">$50000</span>
+      
+            <form class="range-field w-75"></form>
+                <label for="slider21">Gender Gap</label>
+              <input id="slider21" class="border-0" type="range" min="0" max="1" step="0.01" value="0.7" />
+            </form>
+            <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan6">0.7</span>
+          <!-- </div>
+          <div class="col-md-5"> -->
+            <form class="range-field w-75">
+                <label for="slider22">Power Distance</label>
+              <input id="slider22" class="border-0" type="range" min="1" max="120" value=40 />
+            </form>
+            <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan7">40</span>
+          <!-- </div>
+          <div class="col-md-5"> -->
+            <form class="range-field w-75">
+                <label for="slider23">Democracy Value</label>
+              <input id="slider23" class="border-0" type="range" min="0" max="10" value="8" step="0.1" />
+            </form>
+            <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan8">8</span>
+          <!-- </div>
+          <div class="col-md-5"> -->
+            <form class="range-field w-75">
+                <label for="slider24">Unemployment %</label>
+              <input id="slider24" class="border-0" type="range" min="0" max="35" value="6.5" />
+            </form>
+            <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan9">6.5</span>
+          </div>
 
 
-      <div id="underdeveloped_sliders" class="col-md-5">
+      <div id="underdeveloped_sliders" class="col-md-4">
         <form class="range-field w-75" >
             <label for="slider30">GDP Per Capita</label>
             <input id="slider30" class="border-0" type="range" min="20000" max="120000" value="50000" step="1000"  />
           </form>
           <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan10">$50000</span>
     
-    <form class="range-field w-75"></form>
-        <label for="slider31">Gender Gap</label>
-      <input id="slider31" class="border-0" type="range" min="0" max="1" step="0.01" value="0.7" />
-    </form>
-    <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan11">0.7</span>
-  <!-- </div>
-  <div class="col-md-5"> -->
-    <form class="range-field w-75">
-        <label for="slider32">Power Distance</label>
-      <input id="slider32" class="border-0" type="range" min="1" max="120" value=40 />
-    </form>
-    <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan12">40</span>
-  <!-- </div>
-  <div class="col-md-5"> -->
-    <form class="range-field w-75">
-        <label for="slider33">Democracy Value</label>
-      <input id="slider33" class="border-0" type="range" min="0" max="10" value="8" step="0.1" />
-    </form>
-    <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan13">8</span>
-  <!-- </div>
-  <div class="col-md-5"> -->
-    <form class="range-field w-75">
-        <label for="slider34">Unemployment %</label>
-      <input id="slider34" class="border-0" type="range" min="0" max="35" value="6.5" />
-    </form>
-    <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan14">6.5</span>
-  </div>
-
+          <form class="range-field w-75"></form>
+              <label for="slider31">Gender Gap</label>
+            <input id="slider31" class="border-0" type="range" min="0" max="1" step="0.01" value="0.7" />
+          </form>
+          <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan11">0.7</span>
+        <!-- </div>
+        <div class="col-md-5"> -->
+          <form class="range-field w-75">
+              <label for="slider32">Power Distance</label>
+            <input id="slider32" class="border-0" type="range" min="1" max="120" value=40 />
+          </form>
+          <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan12">40</span>
+        <!-- </div>
+        <div class="col-md-5"> -->
+          <form class="range-field w-75">
+              <label for="slider33">Democracy Value</label>
+            <input id="slider33" class="border-0" type="range" min="0" max="10" value="8" step="0.1" />
+          </form>
+          <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan13">8</span>
+        <!-- </div>
+        <div class="col-md-5"> -->
+          <form class="range-field w-75">
+              <label for="slider34">Unemployment %</label>
+            <input id="slider34" class="border-0" type="range" min="0" max="35" value="6.5" />
+          </form>
+          <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan14">6.5</span>
+        </div>
+        <div class="col-md-3">   
+          <h2><span class="badge blue lighten-2 mb-4">Happiness Rating</span></h2>
+          <h2 class="display-4" style="color:#0d47a1" ><strong id="happinessRating">6.83 </strong></h2>
+      </div>  
 
   <div id="map"></div> 
     </div>
@@ -178,8 +211,8 @@
 </div>
  
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> -->
   <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
   integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
   crossorigin=""></script>

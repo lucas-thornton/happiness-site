@@ -4,8 +4,23 @@
   /* margin-left: 200px; */
 }
 
+.panel-heading {
+  padding: 15px 20px;
+  padding-top: 10px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+
+}
+
 #developed_sliders {
   display: inline;
+  
 
 }
 
@@ -17,6 +32,22 @@
 #underdeveloped_sliders {
   display: none;
 
+}
+
+#developed_factors {
+  display: inline;
+  font-size: 12px;
+
+}
+
+#developing_factors {
+  display: none;
+  font-size: 12px;
+}
+
+#underdeveloped_factors {
+  display: none;
+  font-size: 12px;
 }
 
 .popup_GDP {

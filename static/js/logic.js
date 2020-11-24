@@ -14,13 +14,12 @@ L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}
   accessToken: API_KEY
 }).addTo(myMap);
 
-var geoData = "../static/data/start.geojson";
-d3.json(geoData, function(data) {
-  // Create a new choropleth layer
-  geojson = L.choropleth(data, {
+var link = "../static/data/start.geojson";
+d3.json(link, function(data) {
+  // Creating a GeoJSON layer with the retrieved data
+  L.geoJson(data).addTo(myMap);
+});
 
-  });
-}).addTo(myMap);
 
 var slider_GDP = d3.select("#slider10");
 var slider_GDP2 = d3.select("#slider20");
@@ -126,7 +125,7 @@ function predict_underdeveloped() {
   var slider_unemployment = d3.select("#slider34");
   var unemployment_var = slider_unemployment.node().value;
   var happiness = d3.select("#happinessRating")
-  happiness.text((20.6678753 + 0.339313064*gender_var +	0.005733453*powerdist_var+	0.0817029796*democracy_var+	0.0000038013303*GDP_var +	-0.0119318095*4.460714+	-0.169208238*83.877277+	-0.306708*2.90272+	0.123678531*43.201923+	0.0298041247*92.481969+	-0.00230462604*20.637344+	0.0276495569*8.628571+	0.0662814533*1.691071+	0.23932274*1.651037+	-0.00614714256*12.333519+	-0.178125132*48.516071+	-0.0119860879*unemployment_var+	-0.000767185692*22.109564))
+  happiness.text((4.40 + 0.339313064*gender_var +	0.005733453*powerdist_var+	0.0817029796*democracy_var+	0.0000038013303*GDP_var +	-0.0119318095*4.460714+	-0.169208238*83.877277+	-0.306708*2.90272+	0.123678531*43.201923+	0.0298041247*92.481969+	-0.00230462604*20.637344+	0.0276495569*8.628571+	0.0662814533*1.691071+	0.23932274*1.651037+	-0.00614714256*12.333519+	-0.178125132*48.516071+	-0.0119860879*unemployment_var+	-0.000767185692*22.109564))
   var valueSpan = d3.select('.valueSpan');
   valueSpan.text('$' + slider_GDP.node().value)
   var valueSpan1 = d3.select('.valueSpan1');
@@ -152,41 +151,43 @@ function dropdownUpdate() {
   var sli_developed = d3.select('#developed_sliders')
   var sli_developing = d3.select('#developing_sliders')
   var sli_underdeveloped = d3.select('#underdeveloped_sliders')
-  var country_list = d3.select('#country_list')
+  var developed_list = d3.select('#developed_factors')
+  var developing_list = d3.select('#developing_factors')
+  var underdeveloped_list = d3.select('#underdeveloped_factors')
+  var happiness = d3.select("#happinessRating")
   if (dropdown === "Developing") {
     sli_developed.node().style.display = "none"
     sli_developing.node().style.display = "inline"
     sli_underdeveloped.node().style.display = "none"
     // default = 5.45
-    var x = d3.select('#country_list');
-    x.forEach((item) => {
-      item.remove();
-    });
-    developing_factors.forEach((country) => {
-      var opt = country_list.append("option");
-      opt.text(country);
-    });
+    developed_list.node().style.display = "none"
+    developing_list.node().style.display = "inline"
+    underdeveloped_list.node().style.display = "none"
+
+    // x.forEach((item) => {
+    //   item.remove();
+    // });
+    // developing_factors.forEach((country) => {
+    //   var opt = country_list.append("option");
+    //   opt.text(country);
+    // });
   }
   else if (dropdown === "Developed") {
     sli_developed.node().style.display = "inline"
     sli_developing.node().style.display = "none"
     sli_underdeveloped.node().style.display = "none"
-    // var happiness = d3.select("#happinessRating")
-    // happiness.text((20.6678753 + 0.339313064*0.7 +	0.005733453*40+	0.0817029796*8+	0.0000038013303*50000 +	-0.0119318095*4.460714+	-0.169208238*83.877277+	-0.306708*2.90272+	0.123678531*43.201923+	0.0298041247*92.481969+	-0.00230462604*20.637344+	0.0276495569*8.628571+	0.0662814533*1.691071+	0.23932274*1.651037+	-0.00614714256*12.333519+	-0.178125132*48.516071+	-0.0119860879*6.5+	-0.000767185692*22.109564))
-    developed_factors.forEach((country) => {
-      var opt = country_list.append("option");
-      opt.text(country);
-    });
+    happiness.text((20.6678753 + 0.339313064*0.7 +	0.005733453*40+	0.0817029796*8+	0.0000038013303*50000 +	-0.0119318095*4.460714+	-0.169208238*83.877277+	-0.306708*2.90272+	0.123678531*43.201923+	0.0298041247*92.481969+	-0.00230462604*20.637344+	0.0276495569*8.628571+	0.0662814533*1.691071+	0.23932274*1.651037+	-0.00614714256*12.333519+	-0.178125132*48.516071+	-0.0119860879*6.5+	-0.000767185692*22.109564))
+    developed_list.node().style.display = "inline"
+    developing_list.node().style.display = "none"
+    underdeveloped_list.node().style.display = "none"
   }
   else if (dropdown === "Underdeveloped") {
     sli_developed.node().style.display = "none"
     sli_developing.node().style.display = "none"
     sli_underdeveloped.node().style.display = "inline"
-    var list = 
-    underdeveloped_factors.forEach((country) => {
-      var opt = country_list.append("option");
-      opt.text(country);
-    });
+    developed_list.node().style.display = "none"
+    developing_list.node().style.display = "none"
+    underdeveloped_list.node().style.display = "inline"
   }  
 
 }
