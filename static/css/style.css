@@ -1,6 +1,7 @@
 #map {
   height: 1000px;
-  width: 1000px;
+  width: 1175px;
+  
   /* margin-left: 200px; */
 }
 
@@ -50,7 +51,7 @@
   font-size: 12px;
 }
 
-.popup_GDP {
+/* .popup_GDP {
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -58,31 +59,145 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
+} */
 
 /* The actual popup */
-.popup_GDP .popuptext_GDP {
-  visibility: hidden;
-  width: 160px;
+.GDPpopup {
+  display: none;
+  /* width: px; */
   background-color: #555;
   color: #fff;
   text-align: center;
   border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -80px;
 }
 
-/* Popup arrow */
-.popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
+.Genderpopup {
+  display: none;
+  /* width: px; */
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.Powerpopup {
+  display: none;
+  /* width: px; */
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.Demopopup {
+  display: none;
+  /* width: px; */
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.UEpopup {
+  display: none;
+  /* width: px; */
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.GDPpopup2 {
+  display: none;
+  /* width: px; */
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.Genderpopup2 {
+  display: none;
+  /* width: px; */
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.Powerpopup2 {
+  display: none;
+  /* width: px; */
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.Demopopup2 {
+  display: none;
+  /* width: px; */
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.UEpopup2 {
+  display: none;
+  /* width: px; */
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.GDPpopup3 {
+  display: none;
+  /* width: px; */
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.Genderpopup3 {
+  display: none;
+  /* width: px; */
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.Powerpopup3 {
+  display: none;
+  /* width: px; */
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.Demopopup3 {
+  display: none;
+  /* width: px; */
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.UEpopup3 {
+  display: none;
+  /* width: px; */
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.back {
+  /* color: #555; */
+
+}

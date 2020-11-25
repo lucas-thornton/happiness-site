@@ -22,7 +22,7 @@
     <div class="row">
       <div class="col-md-12 jumbotron text-center">
         <h1>The Happiness Project</h1>
-        <p>Use the interactive sliders to show how changes in variables effect overall happiness.</p>
+        <p>Answering the Question "Does True Happiness Comes From Data Analysis?"</p>
       </div>
     </div>
     <div class="row">
@@ -35,6 +35,10 @@
           <option>Developing</option>
           <option>Underdeveloped</option>>
           </select>
+          
+          
+          <a href="about.html">More Information</a>
+          
         </div>
         <div class="panel panel-primary">
           <div class="panel-heading">
@@ -95,35 +99,39 @@
         <div id="developed_sliders" class="col-md-4">
                 <form class="range-field w-75" >
                     <label class=popup_GDP for="slider10">GDP Per Capita</label>
-                    <span class="popuptext_GDP" id="GDP_Popup"></span>
+                      <div class=GDPpopup>Total annual GDP for a company divided by the population of the country</div>
                     <input id="slider10" class="border-0" type="range" min="20000" max="120000" value="50000" step="1000"  />
                   </form>
                   <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan">$50000</span>
             
             <form class="range-field w-75"></form>
-                <label for="slider11">Gender Gap</label>
+                <label class=popup_Gender for="slider11">Gender Gap Index</label>
+                  <div class=Genderpopup>Index measuring gender-based gaps in access to resources and opportunities in a country</div>
               <input id="slider11" class="border-0" type="range" min="0" max="1" step="0.01" value="0.7" />
             </form>
             <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan1">0.7</span>
           <!-- </div>
           <div class="col-md-5"> -->
             <form class="range-field w-75">
-                <label for="slider12">Power Distance</label>
+                <label class=popup_Power for="slider12">Power Distance Index</label>
+                  <div class=Powerpopup>A measurement of the acceptance of a hierarchy of power and wealth by individuals who make up the general population of a country</div>
               <input id="slider12" class="border-0" type="range" min="1" max="120" value=40 />
             </form>
             <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan2">40</span>
           <!-- </div>
           <div class="col-md-5"> -->
             <form class="range-field w-75">
-                <label for="slider13">Democracy Value</label>
+                <label class="popup_Demo" for="slider13">Democracy Value</label>
+                 <div class=Demopopup>Index compiled by the Economic Intelligence Unit that values a country from a full democracy (10) to authoritarian regime (0) </div>
               <input id="slider13" class="border-0" type="range" min="0" max="10" value="8" step="0.1" />
             </form>
             <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan3">8</span>
           <!-- </div>
           <div class="col-md-5"> -->
             <form class="range-field w-75">
-                <label for="slider14">Unemployment %</label>
-              <input id="slider14" class="border-0" type="range" min="0" max="35" value="6.5" />
+                <label class="popup_UE" for="slider14">Unemployment %</label>
+                  <div class="UEpopup">The portion of the civilian labour force that are unemployed</div>
+              <input id="slider14" class="border-0" type="range" min="0" max="10" value="5" />
             </form>
             <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan4">6.5</span>
           </div>
@@ -131,78 +139,87 @@
 
           <div id="developing_sliders" class="col-md-4">
             <form class="range-field w-75" >
-              <label class=popup_GDP for="slider20">GDP Per Capita</label>
-              <span class="popuptext_GDP" id="GDP_Popup"></span>
-              <input id="slider20" class="border-0" type="range" min="20000" max="120000" value="50000" step="1000"  />
+              <label class=popup_GDP2 for="slider20">GDP Per Capita</label>
+                <div class=GDPpopup2>Total annual GDP for a company divided by the population of the country</div>
+              <input id="slider20" class="border-0" type="range" min="5000" max="25000" value="10000" step="1000"  />
             </form>
             <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan5">$50000</span>
       
             <form class="range-field w-75"></form>
-                <label for="slider21">Gender Gap</label>
+                <label class=popup_Gender2 for="slider21">Gender Gap Index</label>
+                  <div class=Genderpopup2>Index measuring gender-based gaps in access to resources and opportunities in a country</div>
               <input id="slider21" class="border-0" type="range" min="0" max="1" step="0.01" value="0.7" />
             </form>
             <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan6">0.7</span>
           <!-- </div>
           <div class="col-md-5"> -->
             <form class="range-field w-75">
-                <label for="slider22">Power Distance</label>
+                <label class=popup_Power2 for="slider22">Power Distance Index</label>
+                  <div class=Powerpopup2>A measurement of the acceptance of a hierarchy of power and wealth by individuals who make up the general population of a country</div>
               <input id="slider22" class="border-0" type="range" min="1" max="120" value=40 />
             </form>
             <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan7">40</span>
           <!-- </div>
           <div class="col-md-5"> -->
             <form class="range-field w-75">
-                <label for="slider23">Democracy Value</label>
+                <label class="popup_Demo2" for="slider23">Democracy Value</label>
+                 <div class=Demopopup2>Index compiled by the Economic Intelligence Unit that values a country from a full democracy (10) to authoritarian regime (0) </div>
               <input id="slider23" class="border-0" type="range" min="0" max="10" value="8" step="0.1" />
             </form>
             <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan8">8</span>
           <!-- </div>
           <div class="col-md-5"> -->
             <form class="range-field w-75">
-                <label for="slider24">Unemployment %</label>
-              <input id="slider24" class="border-0" type="range" min="0" max="35" value="6.5" />
+                <label class="popup_UE2" for="slider24">Unemployment %</label>
+                  <div class="UEpopup2">The portion of the civilian labour force that are unemployed</div>
+              <input id="slider24" class="border-0" type="range" min="0" max="20" value="6.5" />
             </form>
             <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan9">6.5</span>
           </div>
 
-
       <div id="underdeveloped_sliders" class="col-md-4">
         <form class="range-field w-75" >
-            <label for="slider30">GDP Per Capita</label>
-            <input id="slider30" class="border-0" type="range" min="20000" max="120000" value="50000" step="1000"  />
-          </form>
-          <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan10">$50000</span>
-    
-          <form class="range-field w-75"></form>
-              <label for="slider31">Gender Gap</label>
-            <input id="slider31" class="border-0" type="range" min="0" max="1" step="0.01" value="0.7" />
-          </form>
-          <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan11">0.7</span>
-        <!-- </div>
-        <div class="col-md-5"> -->
-          <form class="range-field w-75">
-              <label for="slider32">Power Distance</label>
-            <input id="slider32" class="border-0" type="range" min="1" max="120" value=40 />
-          </form>
-          <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan12">40</span>
-        <!-- </div>
-        <div class="col-md-5"> -->
-          <form class="range-field w-75">
-              <label for="slider33">Democracy Value</label>
-            <input id="slider33" class="border-0" type="range" min="0" max="10" value="8" step="0.1" />
-          </form>
-          <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan13">8</span>
-        <!-- </div>
-        <div class="col-md-5"> -->
-          <form class="range-field w-75">
-              <label for="slider34">Unemployment %</label>
-            <input id="slider34" class="border-0" type="range" min="0" max="35" value="6.5" />
-          </form>
-          <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan14">6.5</span>
-        </div>
+          <label class=popup_GDP3 for="slider30">GDP Per Capita</label>
+            <div class=GDPpopup3>Total annual GDP for a company divided by the population of the country</div>
+          <input id="slider30" class="border-0" type="range" min="0" max="25000" value="10000" step="1000"  />
+        </form>
+        <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan10">$50000</span>
+  
+        <form class="range-field w-75"></form>
+            <label class=popup_Gender3 for="slider31">Gender Gap Index</label>
+              <div class=Genderpopup3>Index measuring gender-based gaps in access to resources and opportunities in a country</div>
+          <input id="slider31" class="border-0" type="range" min="0" max="1" step="0.01" value="0.7" />
+        </form>
+        <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan11">0.7</span>
+      <!-- </div>
+      <div class="col-md-5"> -->
+        <form class="range-field w-75">
+            <label class=popup_Power3 for="slider32">Power Distance Index</label>
+              <div class=Powerpopup3>A measurement of the acceptance of a hierarchy of power and wealth by individuals who make up the general population of a country</div>
+          <input id="slider32" class="border-0" type="range" min="1" max="120" value=40 />
+        </form>
+        <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan12">40</span>
+      <!-- </div>
+      <div class="col-md-5"> -->
+        <form class="range-field w-75">
+            <label class="popup_Demo3" for="slider33">Democracy Value</label>
+             <div class=Demopopup3>Index compiled by the Economic Intelligence Unit that values a country from a full democracy (10) to authoritarian regime (0) </div>
+          <input id="slider33" class="border-0" type="range" min="0" max="10" value="8" step="0.1" />
+        </form>
+        <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan13">8</span>
+      <!-- </div>
+      <div class="col-md-5"> -->
+        <form class="range-field w-75">
+            <label class="popup_UE3" for="slider34">Unemployment %</label>
+              <div class="UEpopup3">The portion of the civilian labour force that are unemployed</div>
+          <input id="slider34" class="border-0" type="range" min="3" max="35" value="10" />
+        </form>
+        <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan14">6.5</span>
+      </div>
+
         <div class="col-md-3">   
           <h2><span class="badge blue lighten-2 mb-4">Happiness Rating</span></h2>
-          <h2 class="display-4" style="color:#0d47a1" ><strong id="happinessRating">6.83 </strong></h2>
+          <h2 class="display-4" style="color:#0d47a1" pattern="^\d*(\.\d{0,2})?$" ><strong id="happinessRating">6.83 </strong></h2>
       </div>  
 
   <div id="map"></div> 
