@@ -2,16 +2,22 @@ from flask import Flask, render_template, redirect, jsonify, request
 import os
 import sys
 
+folder = os.path.join('Static')
+
+
 #################################################
 # Flask Setup
 #################################################
 app = Flask(__name__)
 
+app.config['UPLOAD_FOLDER'] = folder
 #################################################
 # Database Setup
 #################################################
 
 # create route that renders index.html template
+
+
 @app.route("/")
 def home():
     return render_template("index.html")
@@ -19,7 +25,13 @@ def home():
 
 @app.route("/about.html")
 def about():
-    return render_template("about.html")
+    
+    full_file = os.path.join(app.config['UPLOAD_FOLDER'], 'breakdown.png')
+    
+    return render_template("about.html", user_image = full_file)
+
+
+
 
 
 # Query the database and send the jsonified results
