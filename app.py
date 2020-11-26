@@ -23,7 +23,7 @@ def home():
     return render_template("index.html")
 
 
-@app.route("/about.html")
+@app.route("/about")
 def about():
     
     full_file = os.path.join(app.config['UPLOAD_FOLDER'], 'breakdown.png')
